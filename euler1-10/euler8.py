@@ -59,12 +59,10 @@ highest = 0
 
 for i in range(0, len(digits)-12):
     product = 1
-    print("-----")
 
     for j in range(i, i+13):
-        print("Multiplying with " + digits[j])
         product *= int(digits[j])
-        
+
     if product > highest:
         highest = product
 print(highest)
