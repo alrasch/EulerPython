@@ -31,3 +31,15 @@ def get_list_of_primes_up_to(x):
     for i in range(2, int(x)):
         if is_prime(i):
             primes.append(i)
+
+
+def get_nth_prime(n):
+    primes = [2]
+
+    odd = 3
+    while len(primes) < n:
+        if is_prime(odd):
+            primes.append(odd)
+        odd += 2
+
+    return primes[-1]
