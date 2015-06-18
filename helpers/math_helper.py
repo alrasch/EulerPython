@@ -1,7 +1,7 @@
 __author__ = 'aleksander'
 
 
-import inspect
+import math
 
 
 # Primes
@@ -16,12 +16,7 @@ def is_prime(x):
         print("Tried to check if a non-integer is prime. Of course it's not prime.")
         return False
 
-    if x % 2 == 0:
-        upper_limit = int(x/2)
-    else:
-        upper_limit = int((x+1)/2)
-
-    upper_limit += 1
+    upper_limit = math.ceil(math.sqrt(x)) + 1
 
     if x % 2 == 0:
         return False
@@ -36,11 +31,13 @@ def is_prime(x):
 def get_list_of_primes_up_to(x):
     primes = []
     for i in range(2, int(x)):
-        if i % 10000 == 0:
-            print("Progress: " + str(i))
+        # if i % 10000 == 0:
+        #     print("Progress: " + str(i))
 
         if is_prime(i):
+            print(str(i))
             primes.append(i)
+    return primes
 
 
 def get_nth_prime(n):
