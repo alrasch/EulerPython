@@ -67,10 +67,48 @@ def product_of_list(numbers):
 
 def sum_of_list(numbers):
     if not type(numbers) is list:
-        print(product_of_list.__name__ + " requires a list. Other type found.")
+        print(sum_of_list.__name__ + " requires a list. Other type found.")
         return False
 
     sum_of_numbers = 0
     for x in numbers:
         sum_of_numbers += x
     return sum_of_numbers
+
+
+#Triangle numbers
+
+def get_nth_triangle_number(n):
+    triangle_number = 0
+    for i in range(1, n+1):
+        triangle_number += i
+    return triangle_number
+
+
+#Divisibility and divisors
+
+def get_all_divisors(n):
+    if n == 1:
+        return [1]
+    divisors = [1, n]
+
+    upper_limit = math.ceil(math.sqrt(n))
+
+    for i in range(int(upper_limit), 1, -1):
+        if n % i == 0:
+            if i not in divisors:
+                divisors.append(i)
+                divisors.append(n/i)
+
+    result = []
+    for value in divisors:
+        if value not in result:
+            result.append(value)
+
+    return sorted(result)
+
+
+#Sums and products
+
+def get_integer_sum(n):
+    return get_nth_triangle_number(n)
