@@ -9,28 +9,6 @@ import helpers.math_helper as mh
 
 class TestPrimeMethods(unittest.TestCase):
 
-    def test_is_prime(self):
-
-        start = datetime.datetime.now()
-
-        self.assertFalse(mh.is_prime(1))
-        self.assertTrue(mh.is_prime(2))
-        self.assertTrue(mh.is_prime(3))
-        self.assertFalse(mh.is_prime(4))
-        self.assertFalse(mh.is_prime(9))
-        self.assertTrue(mh.is_prime(11))
-        self.assertTrue(mh.is_prime(1709))
-        self.assertTrue(mh.is_prime(5381))
-        self.assertTrue(mh.is_prime(8273))
-
-        self.assertFalse(mh.is_prime(3.14))
-        self.assertFalse(mh.is_prime([1, 2, 3]))
-
-        end = datetime.datetime.now()
-        timedelta = end-start
-
-        print("is_prime, execution time: ", timedelta.microseconds, " µs")
-
     def test_get_nth_triangle_number(self):
         start = datetime.datetime.now()
 
