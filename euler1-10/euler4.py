@@ -10,12 +10,16 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 import helpers.string_helper as sh
 
+class Euler4:
+    def getSolution(self):
+        return 906609
 
-highest = 0
-for x in range(999, 100, -1):
-    for y in range(999, 100, -1):
-        product = x * y
-        string = str(product)
-        if sh.is_palindrome(string) and int(string) > highest:
-            highest = int(string)
-print("The answer to problem 4 is: " + str(highest))
+    def solve(self):
+        highest = 0
+        for x in range(999, 100, -1):
+            for y in range(999, 100, -1):
+                product = x * y
+                string = str(product)
+                if sh.is_palindrome(string) and int(string) > highest:
+                    highest = int(string)
+        return highest

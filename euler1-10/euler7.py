@@ -12,4 +12,9 @@ Strategy: Very straight-forward.
 
 import helpers.math_helper as mh
 
-print(mh.get_nth_prime(10001))
+class Euler7:
+    def getSolution(self):
+        return 104743
+
+    def solve(self):
+        return mh.get_nth_prime(10001)

@@ -8,19 +8,23 @@ By starting with 1 and 2, the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 find the sum of the even-valued terms.
 '''
+class Euler2:
 
+    def getSolution(self):
+        return 4613732
 
-fibs = [1, 1]
+    def solve(self):
+        fibs = [1, 1]
 
-nextfibref = 2
-nextfib = 0
-sum = 0
+        nextfibref = 2
+        nextfib = 0
+        sum = 0
 
-while nextfib <= 4000000:
-    nextfib = fibs[nextfibref-2] + fibs[nextfibref-1]
-    if nextfib % 2 == 0:
-        sum += nextfib
-    fibs.append(nextfib)
-    nextfibref += 1
+        while nextfib <= 4000000:
+            nextfib = fibs[nextfibref-2] + fibs[nextfibref-1]
+            if nextfib % 2 == 0:
+                sum += nextfib
+            fibs.append(nextfib)
+            nextfibref += 1
 
-print(sum)
+        return sum

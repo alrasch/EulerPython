@@ -10,6 +10,9 @@ What is the largest prime factor of the number 600851475143 ?
 
 class Euler3:
 
+    def getSolution(self):
+        return 6857
+
     def solve(self):
         product = 600851475143
         largest_factor = 0
@@ -36,6 +39,3 @@ class Euler3:
                     break
 
         return largest_factor
-
-e3 = Euler3()
-print(e3.solve())

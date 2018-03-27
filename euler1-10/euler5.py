@@ -6,25 +6,13 @@ What is the smallest positive number that is evenly divisible by all of the numb
 '''
 
 '''
-Strategy: First find a number that is divisible by all integers 2-20.
-Then subtract 20 from it over and over, while checking that divisibility
-still holds. The final number printed will be the lowest number.
-
-This can probably be greatly optimized.
+Strategy: All integers up to 20 can be factored into primes.
+If we find the largest holder of each factor, we only need that number of each prime.
 '''
 
-number = 20
+class Euler5:
+    def getSolution(self):
+        return 232792560
 
-for i in range(3, 20):
-    if not number % i == 0:
-        number *= i
-print(str(number))
-
-for i in range(number, 20, -20):
-    catch = True
-    for j in range(3, 20):
-        if not i % j == 0:
-            catch = False
-            break
-    if catch:
-        print(str(i))
+    def solve(self):
+        return (2**4 * 3**2 * 5 * 7 * 11 * 13 * 17 * 19)

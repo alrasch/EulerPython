@@ -16,7 +16,7 @@ def is_prime(x):
     if x % 2 == 0:
         return False
 
-    for i in range(3, upper_limit, 2):
+    for i in range(3, int(upper_limit), 2):
         if x % i == 0:
             return False
 

@@ -6,11 +6,7 @@ import helpers.math.divisibility as div
 def get_list_of_primes_up_to(x):
     primes = []
     for i in range(2, int(x)):
-        # if i % 10000 == 0:
-        #     print("Progress: " + str(i))
-
         if div.is_prime(i):
-            print(str(i))
             primes.append(i)
     return primes
 

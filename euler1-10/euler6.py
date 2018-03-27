@@ -14,14 +14,19 @@ Find the difference between the sum of the squares of the first one hundred natu
 Strategy: Extremely straight-forward
 '''
 
-sum_of_squares = 0
-square_of_sum = 0
+class Euler6:
+    def getSolution(self):
+        return 25164150
 
-for i in range(1, 101):
-    sum_of_squares += (i**2)
-    square_of_sum += i
+    def solve(self):
+        sum_of_squares = 0
+        square_of_sum = 0
 
-#The below line squares
-square_of_sum **= 2
+        for i in range(1, 101):
+            sum_of_squares += (i**2)
+            square_of_sum += i
 
-print(abs(square_of_sum - sum_of_squares))
+        #The below line squares
+        square_of_sum **= 2
+
+        return abs(square_of_sum - sum_of_squares)
