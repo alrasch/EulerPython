@@ -5,8 +5,8 @@ from helpers.math.divisibility import Divisibility
 
 def get_list_of_primes_up_to(x):
     div = Divisibility()
-    primes = []
-    for i in range(2, int(x)):
+    primes = [2]
+    for i in range(3, int(x), 2):
         if div.is_prime(i):
             primes.append(i)
     return primes
