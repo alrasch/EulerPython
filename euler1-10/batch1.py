@@ -1,4 +1,6 @@
 import importlib
+import time
+
 from resources.exceptions.answerexception import AnswerException
 from helpers.printer.printer import Printer
 
@@ -18,8 +20,13 @@ class Batch1:
             mod_class = getattr(module, "Euler" + str(i))
 
             try:
-                if self.assertEqual(mod_class.solve(self), mod_class.getSolution(self)):
-                    Printer.printSuccess("Euler" + str(i) + " success!")
+                start_time = time.time()
+                success = self.assertEqual(mod_class.solve(self), mod_class.getSolution(self))
+                end_time = time.time()
+                time_delta = end_time - start_time
+
+                if success: Printer.printSuccess("Euler" + str(i) + " succeeded in " + str(time_delta))
+
                 successes += 1
             except AnswerException as error:
                 Printer.printFailure("Euler" + str(i) + " failure!")
