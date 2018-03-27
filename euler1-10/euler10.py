@@ -11,13 +11,15 @@ Find the sum of all the primes below two million.
 Strategy: Straight-forward.
 '''
 
-import helpers.math_helper as mh
+from helpers.math.divisibility import Divisibility
 
 class Euler10:
     def getSolution(self):
         return 142913828922
 
     def solve(self):
-        primes = mh.get_list_of_primes_up_to(2000000)
-        sum = mh.sum_of_list(primes)
+        div = Divisibility()
+        primes = div.get_primes_up_to(2000000)
+        sum = 0
+        for prime in primes: sum += prime
         return sum
