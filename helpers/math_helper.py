@@ -1,9 +1,10 @@
 __author__ = 'aleksander'
 
 import math
-import helpers.math.divisibility as div
+from helpers.math.divisibility import Divisibility
 
 def get_list_of_primes_up_to(x):
+    div = Divisibility()
     primes = []
     for i in range(2, int(x)):
         if div.is_prime(i):
@@ -12,6 +13,7 @@ def get_list_of_primes_up_to(x):
 
 
 def get_nth_prime(n):
+    div = Divisibility()
     primes = [2]
 
     odd = 3
