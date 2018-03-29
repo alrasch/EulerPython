@@ -6,8 +6,7 @@ class Euler11(AbstractSolution):
         return 70600674
 
     def solve(self, external_call=None):
-        prepend = "../" if external_call == True else ""
-        with open(prepend + "../inputs/euler11input.txt") as stream:
+        with open("../inputs/euler11input.txt") as stream:
             input = stream.readlines()
 
         content = [x.strip().split() for x in input]
