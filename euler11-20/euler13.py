@@ -22,16 +22,12 @@ class Euler13(AbstractSolution):
         total = [0, 0] + total
 
         for i in range(length, 0, -1):
-
-            if total[i] >= 10:
-                tens = int(((total[i] - (total[i] % 10)) / 10) % 10)
-                total[i-1] += tens
-                total[i] -= tens * 10
-
-            if total[i] >= 100:
-                hundreds = int((total[i] - (total[i] % 100)) / 100)
-                total[i - 2] += hundreds
-                total[i] -= hundreds * 100
+            for exponent in range(1, 10):
+                power = 10**exponent
+                if total[i] >= power:
+                    hundreds = int((total[i] - (total[i] % power)) / power)
+                    total[i - exponent] += hundreds
+                    total[i] -= hundreds * power
 
         total_string = ""
         for i in total:
