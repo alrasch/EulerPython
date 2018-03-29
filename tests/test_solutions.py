@@ -11,7 +11,7 @@ class Batch1:
         return True
 
     def runTests(self):
-        testable_class_enumeration = range(1, 13)
+        testable_class_enumeration = range(1, 14)
         successes = 0
         failures = 0
 
