@@ -12,12 +12,13 @@ Strategy: Straight-forward.
 '''
 
 from helpers.math.divisibility import Divisibility
+from abstract.AbstractSolution import AbstractSolution
 
-class Euler10:
+class Euler10(AbstractSolution):
     def getSolution(self):
         return 142913828922
 
-    def solve(self):
+    def solve(self, external_call=None):
         div = Divisibility()
         primes = div.get_primes_up_to(2000000)
         sum = 0

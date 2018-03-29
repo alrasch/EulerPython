@@ -1,6 +1,5 @@
 __author__ = 'aleksander'
 
-from helpers.math.divisibility import Divisibility
 
 '''
 The prime factors of 13195 are 5, 7, 13 and 29.
@@ -8,12 +7,15 @@ The prime factors of 13195 are 5, 7, 13 and 29.
 What is the largest prime factor of the number 600851475143 ?
 '''
 
-class Euler3:
+from abstract.AbstractSolution import AbstractSolution
+from helpers.math.divisibility import Divisibility
+
+class Euler3(AbstractSolution):
 
     def getSolution(self):
         return 6857
 
-    def solve(self):
+    def solve(self, external_call=False):
         product = 600851475143
         largest_factor = 0
 

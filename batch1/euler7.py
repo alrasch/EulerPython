@@ -11,10 +11,11 @@ Strategy: Very straight-forward.
 '''
 
 import helpers.math_helper as mh
+from abstract.AbstractSolution import AbstractSolution
 
-class Euler7:
+class Euler7(AbstractSolution):
     def getSolution(self):
         return 104743
 
-    def solve(self):
+    def solve(self, external_call=None):
         return mh.get_nth_prime(10001)

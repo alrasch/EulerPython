@@ -14,11 +14,13 @@ Find the difference between the sum of the squares of the first one hundred natu
 Strategy: Extremely straight-forward
 '''
 
-class Euler6:
+from abstract.AbstractSolution import AbstractSolution
+
+class Euler6(AbstractSolution):
     def getSolution(self):
         return 25164150
 
-    def solve(self):
+    def solve(self, external_call=None):
         sum_of_squares = 0
         square_of_sum = 0
 

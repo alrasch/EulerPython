@@ -9,12 +9,13 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 '''
 
 import helpers.string_helper as sh
+from abstract.AbstractSolution import AbstractSolution
 
-class Euler4:
+class Euler4(AbstractSolution):
     def getSolution(self):
         return 906609
 
-    def solve(self):
+    def solve(self, external_class=None):
         highest = 0
         for x in range(999, 100, -1):
             for y in range(999, 100, -1):

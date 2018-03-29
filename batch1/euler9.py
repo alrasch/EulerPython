@@ -2,12 +2,13 @@ __author__ = 'aleksander'
 
 import math
 import helpers.math_helper as mh
+from abstract.AbstractSolution import AbstractSolution
 
-class Euler9:
+class Euler9(AbstractSolution):
     def getSolution(self):
         return 31875000
 
-    def solve(self):
+    def solve(self, external_call=None):
         for a in range(1, 1000):
             for b in range(1, 1000):
                 c = math.sqrt(a**2 + b**2)

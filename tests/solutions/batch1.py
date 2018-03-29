@@ -11,17 +11,16 @@ class Batch1:
         return True
 
     def runTests(self):
-        testable_class_enumeration = range(1, 11)
+        testable_class_enumeration = range(1, 12)
         successes = 0
         failures = 0
 
         for i in testable_class_enumeration:
-            module = importlib.import_module("euler" + str(i))
-            mod_class = getattr(module, "Euler" + str(i))
-
             try:
+                module = importlib.import_module("euler" + str(i))
+                mod_class = getattr(module, "Euler" + str(i))
                 start_time = time.time()
-                success = self.assertEqual(mod_class.solve(self), mod_class.getSolution(self))
+                success = self.assertEqual(mod_class.solve(self, True), mod_class.getSolution(self))
                 end_time = time.time()
                 time_delta = end_time - start_time
 

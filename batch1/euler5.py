@@ -10,9 +10,11 @@ Strategy: All integers up to 20 can be factored into primes.
 If we find the largest holder of each factor, we only need that number of each prime.
 '''
 
-class Euler5:
+from abstract.AbstractSolution import AbstractSolution
+
+class Euler5(AbstractSolution):
     def getSolution(self):
         return 232792560
 
-    def solve(self):
+    def solve(self, external_call=None):
         return (2**4 * 3**2 * 5 * 7 * 11 * 13 * 17 * 19)
