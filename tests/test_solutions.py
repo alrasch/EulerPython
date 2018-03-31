@@ -11,7 +11,7 @@ class Batch1:
         return True
 
     def runTests(self):
-        testable_class_enumeration = [x for x in range(1, 16) if x not in [14]]
+        testable_class_enumeration = [x for x in range(1, 16) if x not in []]
         successes = 0
         failures = 0
 
