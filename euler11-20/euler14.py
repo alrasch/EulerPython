@@ -8,6 +8,7 @@ class Euler14(AbstractSolution):
         nat = Naturals()
 
         high_count = 0
+        candidate = 0
 
         already_collatzed = [0] * (10**6 + 1)
         for i in range(10**6, 2, -1):
@@ -19,6 +20,5 @@ class Euler14(AbstractSolution):
 
             if count > high_count:
                 high_count = count
-        return high_count
-
-Euler14().solve()
+                candidate = i
+        return candidate
