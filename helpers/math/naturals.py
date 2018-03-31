@@ -12,18 +12,12 @@ class Naturals:
         return n * self.factorial(n - 1)
 
     def collatz(self, n):
-        self.validate_natural(n)
-
-        if n == 1: raise InputException("Input 1 does not make much sense for Collatz.")
-
         if n % 2 == 0:
-            return int(n / 2)
+            return (n / 2)
 
-        return int(3 * n + 1)
+        return (3 * n + 1)
 
     def collatz_count(self, n):
-        self.validate_natural(n)
-
         steps = 0
 
         while n > 1:
