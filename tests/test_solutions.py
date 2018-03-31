@@ -4,7 +4,7 @@ import time
 from resources.exceptions.answerexception import AnswerException
 from helpers.printer.printer import Printer
 
-class Batch1:
+class TestSolutions:
     def assertEqual(self, value, expectation):
         if value != expectation:
             raise AnswerException("Got output " + str(value) + " but expected " + str(expectation) + ".")
@@ -35,5 +35,5 @@ class Batch1:
         if successes == len(testable_class_enumeration):
             Printer.printSuccess("All tests passed!")
 
-b1 = Batch1()
-b1.runTests()
+tester = TestSolutions()
+tester.runTests()
