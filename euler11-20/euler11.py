@@ -5,7 +5,7 @@ class Euler11(AbstractSolution):
     def getSolution(self):
         return 70600674
 
-    def solve(self, external_call=None):
+    def solve(self):
         with open("../inputs/euler11input.txt") as stream:
             input = stream.readlines()
 

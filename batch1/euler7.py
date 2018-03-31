@@ -17,5 +17,5 @@ class Euler7(AbstractSolution):
     def getSolution(self):
         return 104743
 
-    def solve(self, external_call=None):
+    def solve(self):
         return mh.get_nth_prime(10001)

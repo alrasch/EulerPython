@@ -16,5 +16,5 @@ class Euler5(AbstractSolution):
     def getSolution(self):
         return 232792560
 
-    def solve(self, external_call=None):
+    def solve(self):
         return (2**4 * 3**2 * 5 * 7 * 11 * 13 * 17 * 19)

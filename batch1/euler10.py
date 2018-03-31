@@ -18,7 +18,7 @@ class Euler10(AbstractSolution):
     def getSolution(self):
         return 142913828922
 
-    def solve(self, external_call=None):
+    def solve(self):
         div = Divisibility()
         primes = div.get_primes_up_to(2000000)
         sum = 0

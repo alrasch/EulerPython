@@ -24,7 +24,7 @@ for the sake of completion.
 class Euler15(AbstractSolution):
     def getSolution(self): return 137846528820
 
-    def solve(self, external_call=None):
+    def solve(self):
         nat = Naturals()
         answer = nat.factorial(40) / (nat.factorial(20) * nat.factorial(20))
         return int(answer)

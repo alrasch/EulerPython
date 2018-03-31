@@ -17,7 +17,7 @@ class Euler2(AbstractSolution):
     def getSolution(self):
         return 4613732
 
-    def solve(self, external_call=None):
+    def solve(self):
         fibs = [1, 1]
 
         nextfibref = 2

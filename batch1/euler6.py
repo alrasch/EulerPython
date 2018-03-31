@@ -20,7 +20,7 @@ class Euler6(AbstractSolution):
     def getSolution(self):
         return 25164150
 
-    def solve(self, external_call=None):
+    def solve(self):
         sum_of_squares = 0
         square_of_sum = 0
 

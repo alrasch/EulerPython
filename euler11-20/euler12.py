@@ -32,7 +32,7 @@ class Euler12(AbstractSolution):
 
     def getSolution(self): return 76576500
 
-    def solve(self, external_call=None):
+    def solve(self):
         n = 0
         sum = 0
         num_of_divisors = 1

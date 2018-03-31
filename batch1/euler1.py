@@ -11,7 +11,7 @@ class Euler1(AbstractSolution):
     def getSolution(self):
         return 233168
 
-    def solve(self, external_call=False):
+    def solve(self):
         sum = 0
         for i in range(1, 1000):
             if i % 3 == 0 or i % 5 == 0:

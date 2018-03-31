@@ -20,7 +20,7 @@ class Batch1:
                 module = importlib.import_module("euler" + str(i))
                 mod_class = getattr(module, "Euler" + str(i))
                 start_time = time.time()
-                success = self.assertEqual(mod_class.solve(self, True), mod_class.getSolution(self))
+                success = self.assertEqual(mod_class.solve(self), mod_class.getSolution(self))
                 end_time = time.time()
                 time_delta = end_time - start_time
 

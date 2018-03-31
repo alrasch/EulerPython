@@ -15,7 +15,7 @@ class Euler3(AbstractSolution):
     def getSolution(self):
         return 6857
 
-    def solve(self, external_call=False):
+    def solve(self):
         product = 600851475143
         largest_factor = 0
 

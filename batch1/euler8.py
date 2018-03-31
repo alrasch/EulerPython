@@ -38,7 +38,7 @@ class Euler8(AbstractSolution):
     def getSolution(self):
         return 23514624000
 
-    def solve(self, external_call=None):
+    def solve(self):
         number = '73167176531330624919225119674426574742355349194934' \
                  '96983520312774506326239578318016984801869478851843' \
                  '85861560789112949495459501737958331952853208805511' \
