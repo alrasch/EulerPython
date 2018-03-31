@@ -2,6 +2,8 @@ from resources.exceptions.inputexception import InputException
 
 
 class Naturals:
+    collatz_chain = {}
+
     def validate_natural(self, input):
         if not isinstance(input, int):
             raise InputException("Input {} is not natural.".format(input))
@@ -18,10 +20,11 @@ class Naturals:
         return (3 * n + 1)
 
     def collatz_count(self, n):
-        steps = 0
+        if n == 1: return 0
 
-        while n > 1:
-            n = self.collatz(n)
-            steps += 1
+        if n in self.collatz_chain: return self.collatz_chain[n]
 
-        return steps
+        collatz = self.collatz(n)
+        count = 1 + self.collatz_count(collatz)
+        self.collatz_chain[n] = count
+        return count
