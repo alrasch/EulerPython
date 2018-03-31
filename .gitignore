@@ -47,3 +47,6 @@ crashlytics-build.properties
 
 # Damn .pyc files
 *.pyc
+
+# Scratchpad
+scratch/
